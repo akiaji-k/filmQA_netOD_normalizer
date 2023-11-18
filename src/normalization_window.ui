@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NormalizationWindow</class>
+ <widget class="QWidget" name="NormalizationWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Set normalization reference film</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+   <item>
+    <widget class="MyGraphicsView" name="graphicsView"/>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,1">
+     <item>
+      <widget class="ProcessStepWidget" name="processStepWidget_1" native="true"/>
+     </item>
+     <item>
+      <widget class="ProcessStepWidget" name="processStepWidget_2" native="true"/>
+     </item>
+     <item>
+      <widget class="ProcessStepWidget" name="processStepWidget_3" native="true"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>my_graphics_view.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ProcessStepWidget</class>
+   <extends>QWidget</extends>
+   <header>process_step_widget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
