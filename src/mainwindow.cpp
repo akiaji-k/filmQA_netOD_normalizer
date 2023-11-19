@@ -375,9 +375,10 @@ void MainWindow::NormalizationCoefficientSlot(const cv::Scalar coef)
         qDebug() << "current mean B:" << mean_scalar[0] << "G:" << mean_scalar[1] << "R:" << mean_scalar[2];
 
         cv::Scalar normalization_coef;
-        cv::divide(mean_scalar, coef, normalization_coef);
+        cv::divide(coef, mean_scalar, normalization_coef);
         m_normalization_coef = std::make_optional(normalization_coef);
-        qDebug() << "normalize coefficients B:" << mean_scalar[0] / coef[0] << "G:" << mean_scalar[1] / coef[1]<< "R:" << mean_scalar[2] / coef[2];
+        qDebug() << "normalize coefficients B:" << coef[0] / mean_scalar[0]
+                 << "G:" << coef[1] / mean_scalar[1] << "R:" << coef[2] / mean_scalar[2];
         qDebug() << "normalize coefficients B:" << m_normalization_coef.value()[0] << "G:" << m_normalization_coef.value()[1]<< "R:" << m_normalization_coef.value()[2];
 
         QString means = QString(tr("current mean RGB(%1, %2, %3)\n")).arg(mean_scalar[2]).arg(mean_scalar[1]).arg(mean_scalar[0]);
