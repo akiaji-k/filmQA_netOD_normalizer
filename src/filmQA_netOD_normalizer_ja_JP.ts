@@ -122,7 +122,7 @@ Set valid ROIs.</source>
     </message>
     <message>
         <location filename="normalization_window.cpp" line="11"/>
-        <source>Skip setting this ROI scince the inputs are
+        <source>Skip setting this ROI since the inputs are
 netOD equivalent (rescaled to 16-bit) images.</source>
         <translation>入力画像が（16-bit整数にリスケールされた）
 netOD画像のため、このROIの設定をスキップする。</translation>

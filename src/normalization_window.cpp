@@ -11,7 +11,7 @@ NormalizationWindow::NormalizationWindow(QWidget *parent)
     , m_ui(new Ui::NormalizationWindow)
     , m_image_path_edit(std::make_shared<ImagePathEdit>())
     , m_skip_unirradiated_check(
-          std::make_shared<QCheckBox>(tr("Skip setting this ROI scince the inputs are \nnetOD "
+          std::make_shared<QCheckBox>(tr("Skip setting this ROI since the inputs are \nnetOD "
                                          "equivalent (rescaled to 16-bit) images.")))
     , m_mat_image_bridge(std::make_unique<CvMatQImageBridge>())
     , m_cv_mat_processor(std::make_unique<CvMatProcessor>())
