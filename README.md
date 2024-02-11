@@ -47,11 +47,11 @@ $$
 
 3. Set an ROI to a uniform area of unirradiated film (indicated by a blue dotted line). 
 
-4. (This step can be skipped by checking the "Skip setting this ROI." checkbox.) 
+4. (This step can be skipped by checking the "Skip setting this ROI." checkbox.)
 
-  If necessary, to normalize to the film that was exposed to a known dose when the Calibration Curve was acquired, set an ROI to a uniform area of the film with a known dose (indicated by the green dash-dotted line). Then, in a new window that appears, perform steps 1-3 above for the film at the time of Calibration Curve acquisition.
+   If necessary, to normalize to the film that was exposed to a known dose when the Calibration Curve was acquired, set an ROI to a uniform area of the film with a known dose (indicated by the green dash-dotted line). Then, in a new window that appears, perform steps 1-3 above for the film at the time of Calibration Curve acquisition.
 
-5. Click on the button labeled "Write to: OUTPUT_PATH" to output the netOD images.
+6. Click on the button labeled "Write to: OUTPUT_PATH" to output the netOD images.
 
 
 
