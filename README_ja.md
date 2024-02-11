@@ -3,40 +3,38 @@ netOD 等価の TIFF 画像を出力するソフトウェアです。
 
 Net optical density (netOD) は下式であらわされます。
 
-
 $$
 \begin{align*}
 OD &= log_{10}(\cfrac{2^{16}-1}{PV}) = log_{10}(65535/PV) \\
-
 netOD &= OD_{exposure} - OD_{unexposure} \\
 &= log_{10}(65535/PV_{exposure}) - log_{10}(65535/PV_{unexposure}) \\
 &= log_{10}(\cfrac{65535/PV_{exposure}}{65535/PV_{unexposure}})  \\
 &= log_{10}(\cfrac{PV_{unexposure}}{PV_{exposure}})
 \end{align*}
 $$
+
 netOD は小数値ですが、一般的なフィルム解析ソフトウェアは画素値が整数値の画像を入力とするため、本ソフトウェアが出力するnetOD 等価画像は次式で表される画素値を持ちます。
+
 $$
 netOD_{equiv} = \cfrac{PV_{exposure}}{\overline{PV_{unexposure}}}\times65535
 $$
+
 必要であれば、Calibration Curve 取得時の既知線量で正規化することもできます。その場合、出力される netOD 等価画像の画素値は以下の式であらわされます。
+
 $$
+\begin{align*}
 netOD_{equiv} = \cfrac{PV_{exposure}}{\overline{PV_{unexposure}}}\times65535\times k_{norm}\\ 
 \text{where}\qquad
 k_{norm} = \cfrac{\overline{PV_{calibration}}}{\overline{PV_{current}}}
+\end{align*}
 $$
 
 
 ## 環境
-
 - OS: Windows7, 11
-
 - Qt5.15.2, Qt 6.6.0
-
 - OpenCV 4.8.0
-
 - LibTIFF 4.6.0
-
-
 
 ## 使用方法
 
