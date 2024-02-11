@@ -7,35 +7,36 @@ Net optical density (netOD) is represented by the following equation.
 $$
 \begin{align*}
 OD &= log_{10}(\cfrac{2^{16}-1}{PV}) = log_{10}(65535/PV) \\
-
 netOD &= OD_{exposure} - OD_{unexposure} \\
 &= log_{10}(65535/PV_{exposure}) - log_{10}(65535/PV_{unexposure}) \\
 &= log_{10}(\cfrac{65535/PV_{exposure}}{65535/PV_{unexposure}})  \\
 &= log_{10}(\cfrac{PV_{unexposure}}{PV_{exposure}})
 \end{align*}
 $$
+
 Although netOD is a fractional value, typical film analysis software takes an image with integer pixel values as input, so the netOD-equivalent image output by the software has pixel values represented by the following equation.
+
 $$
 netOD_{equiv} = \cfrac{PV_{exposure}}{\overline{PV_{unexposure}}}\times65535
 $$
+
 If necessary, normalization with the known dose at the time of Calibration Curve acquisition can be applied. In that case, the pixel values of the output netOD-equivalent image will be the following equation.
+
 $$
-netOD_{equiv} = \cfrac{PV_{exposure}}{\overline{PV_{unexposure}}}\times65535\times k_{norm}\\ 
+\begin{align*}
+netOD_{equiv} = \cfrac{PV_{exposure}}{\overline{PV_{unexposure}}} \times 65535 \times k_{norm} \\
 \text{where}\qquad
 k_{norm} = \cfrac{\overline{PV_{calibration}}}{\overline{PV_{current}}}
+\end{align*}
 $$
 
 
 ## Environment
 
 - OS: Windows7, 11
-
 - Qt5.15.2, Qt 6.6.0
-
 - OpenCV 4.8.0
-
 - LibTIFF 4.6.0
-
 
 
 ## Usage
