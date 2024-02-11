@@ -2,6 +2,8 @@
 A GUI software to create netOD-equivalent TIFF image.
 
 Net optical density (netOD) is represented by the following equation.
+
+
 $$
 \begin{align*}
 OD &= log_{10}(\cfrac{2^{16}-1}{PV}) = log_{10}(65535/PV) \\

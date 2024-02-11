@@ -2,6 +2,8 @@
 netOD 等価の TIFF 画像を出力するソフトウェアです。
 
 Net optical density (netOD) は下式であらわされます。
+
+
 $$
 \begin{align*}
 OD &= log_{10}(\cfrac{2^{16}-1}{PV}) = log_{10}(65535/PV) \\
